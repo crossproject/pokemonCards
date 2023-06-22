@@ -1,4 +1,4 @@
 import pokemonDetails from "./pokemonCards.mjs";
 
-const pokemonId = 906;
+const pokemonId = 150;
 pokemonDetails(pokemonId);

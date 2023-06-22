@@ -21,12 +21,19 @@ export function pokemonDetailsTemplate(pokemon){
             <p id="regionOfOrigin">Region: ${getRegion(pokemon)}</p>
             <p id="pokemonHeight">Height: ${pokemon.height / 10} m</p>
             <p id="pokemonWeight">Weight: ${pokemon.weight / 10} kg</p>
-            <p id="pokemonType1">Type 1: ${pokemon.types[0].type.name}</p>
-            <p id="pokemonType2"></p>
+            <p id="pokemonType1">Type: ${pokemon.types[0].type.name} ${type2(pokemon)}</p>
             <p id="pokemonAbility">Ability: ${pokemon.abilities[0].ability.name}</p>
             <p id="statTotal">Base Stat total: ${baseStatTotal(pokemon)}</p>
             `
   };
+  function type2(pokemon) {
+    if (pokemon.types[1] != undefined ){
+      return `${pokemon.types[1].type.name}`;
+    }
+    else {
+      return "";
+    }
+  }
 
   function baseStatTotal(pokemon){
     let total = 0;
