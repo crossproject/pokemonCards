@@ -26,6 +26,8 @@ export function pokemonDetailsTemplate(pokemon){
             <p id="statTotal">Base Stat total: ${baseStatTotal(pokemon)}</p>
             `
   };
+
+
   function type2(pokemon) {
     if (pokemon.types[1] != undefined ){
       return `${pokemon.types[1].type.name}`;
