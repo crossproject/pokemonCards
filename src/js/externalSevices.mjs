@@ -11,7 +11,8 @@ function convertToJson(res) {
   }
 
 export async function getPokemonByPokedexNumber(id) {
-  const response = await fetch(baseURL + `pokemon-species/${id}`);
+  const response = await fetch(baseURL + `pokemon/${id}`);
   const pokemon = await convertToJson(response);
-   return pokemon.Result;
+  console.log(pokemon);
+   return pokemon;
 }
