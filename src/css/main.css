@@ -35,6 +35,7 @@ body{
     grid-row: 3;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 /* second li for ID secondPartMenu "Deck Cards" */
@@ -68,6 +69,7 @@ body{
     grid-row: 3;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 #forthPartMenu{
@@ -75,6 +77,7 @@ body{
     grid-row: 3;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 /* End of Navigation css */
@@ -95,4 +98,14 @@ body{
 }
 
 
+/* Phone media query */
+@media screen and (max-width: 426px){
+    .menu{
+        font-size: 10px;
+    }
+
+    #secondPartMenu, #thirdPartMenu, #forthPartMenu{
+        padding: 5px 0 5px 0;
+    }
+}
 
