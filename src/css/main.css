@@ -80,8 +80,6 @@ body{
     padding: 10px;
 }
 
-/* End of Navigation css */
-
 #navImage{
     max-width: 70%;
     margin: 0;
@@ -96,7 +94,20 @@ body{
     max-width: 100%;
     padding-top: 20px;
 }
+/* End of Navigation css */
 
+/* footer css */
+.footer {
+    padding: 30px;
+    background: #ffde00;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin:0 auto;
+  }
+/* end of footer */
 
 /* Phone media query */
 @media screen and (max-width: 426px){
