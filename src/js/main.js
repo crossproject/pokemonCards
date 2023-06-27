@@ -1,5 +1,3 @@
-let year = document.querySelector("#year");
+import { loadHeaderFooter } from "./utils.mjs";
 
-(document).ready(function () {
-  year.innerText = new Date().getFullYear();
-});
+loadHeaderFooter();

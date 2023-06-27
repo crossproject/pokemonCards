@@ -6,14 +6,15 @@ body{
 }
 
 /* Navigation css */
-.menu{
+header{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     background-color: #ffde00;
     list-style-type: none;
     display: grid;
     /* grid-template-columns: 1fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr; */
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    /* grid-template-columns: 2fr 1fr 1fr 1fr 2fr; */
+    grid-template-columns: 1fr;
     /* justify-items: center; */
     padding-bottom: 20px;
     padding-top: 10px;
@@ -50,11 +51,12 @@ body{
     /* justify-self: end; */
 }
 
-#navImage{
+header img{
     /* grid-column: 4; */
     grid-column: 3;
     grid-row: 1;
     justify-self: center;
+
 }
 
 #title2{
@@ -97,7 +99,7 @@ body{
 /* End of Navigation css */
 
 /* footer css */
-.footer {
+footer {
     padding: 30px;
     background: #ffde00;
     color: black;
@@ -111,7 +113,7 @@ body{
 
 /* Phone media query */
 @media screen and (max-width: 426px){
-    .menu{
+    header{
         font-size: 10px;
     }
 
