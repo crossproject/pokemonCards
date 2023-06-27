@@ -16,3 +16,10 @@ export async function getPokemonByPokedexNumber(id) {
   console.log(pokemon);
    return pokemon;
 }
+
+export async function getSpeciesbyNumber(id) {
+const response = await fetch(baseURL + `pokemon-species/${id}`);
+const pokemon = await convertToJson(response);
+console.log(pokemon);
+ return pokemon;
+}
