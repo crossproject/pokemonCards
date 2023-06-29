@@ -117,6 +117,12 @@ header img{
     border-style: solid;
     max-width: 80%;
 }
+.FunFacts img {
+    width: 60%;
+}
+.FunFacts2 img {
+    width: 60%;
+}
 /* End of Fun Fact css */
 
 

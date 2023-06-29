@@ -76,14 +76,26 @@ export function pokemonFunFactTemplate(pokemonSpecies){
     const pokemonImage = await getPokemonByPokedexNumber(pokemonSpecies.id);
     const pokemonFunFact = document.querySelector(".FunFacts");
     const pokemonElementImage = document.createElement("img");
-    pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
-    pokemonFunFact.appendChild(pokemonElementImage);
+    if (pokemonImage.sprites.other.home.front_default != null){
+        pokemonElementImage.src = `${pokemonImage.sprites.other.home.front_default}`;
+        pokemonFunFact.appendChild(pokemonElementImage);
+    }
+    else {
+        pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
+        pokemonFunFact.appendChild(pokemonElementImage);  
+    }
   }
 
   async function FunFactImage2(pokemonSpecies2){
     const pokemonImage = await getPokemonByPokedexNumber(pokemonSpecies2.id);
     const pokemonFunFact = document.querySelector(".FunFacts2");
     const pokemonElementImage = document.createElement("img");
-    pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
-    pokemonFunFact.appendChild(pokemonElementImage);
+    if (pokemonImage.sprites.other.home.front_default != null){
+        pokemonElementImage.src = `${pokemonImage.sprites.other.home.front_default}`;
+        pokemonFunFact.appendChild(pokemonElementImage);
+    }
+    else {
+        pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
+        pokemonFunFact.appendChild(pokemonElementImage);  
+    }
   }
