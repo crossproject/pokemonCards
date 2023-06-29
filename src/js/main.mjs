@@ -8,25 +8,40 @@ export async function funFacts() {
          randomPokemon = 1;
     }
     let pokemonSpecies = await getSpeciesByPokedexNumber(randomPokemon);
-    let pokemon = await getPokemonByPokedexNumber(randomPokemon);
 
-  //  console.log(pokemonSpecies.flavor_text_entries[6].language.name);
-    console.log(pokemonSpecies.name);
-    console.log(pokemonSpecies);
 
-      const pokemonFunFact = document.querySelector(".FunFacts");
-      await renderWithTemplate(pokemonFunFactTemplate,pokemonFunFact,pokemonSpecies);
-    //  await renderWithTemplate(pokemonFunFactTemplate,pokemonFunFact,pokemon);
+    let randomPokemon2 = Math.floor(Math.random() * 1011);
+    if (randomPokemon2 == 0 || randomPokemon2 == 1011){
+         randomPokemon2 = 1;
+    }
+    let pokemonSpecies2 = await getSpeciesByPokedexNumber(randomPokemon2);
+FunFactImage(pokemonSpecies);
+FunFactImage2(pokemonSpecies2);
 
+    
+    const pokemonFunFact = document.querySelector(".FunFacts");
+    
+    
+    await renderWithTemplate(pokemonFunFactTemplate,pokemonFunFact,pokemonSpecies);
+
+      const pokemonFunFact2 = document.querySelector(".FunFacts2");
+      pokemonSpecies = pokemonSpecies2
+      
+      await renderWithTemplate(pokemonFunFactTemplate,pokemonFunFact2,pokemonSpecies);
+      
+      
     };
 
 
 export function pokemonFunFactTemplate(pokemonSpecies){
+    let dexEntry = checkForDexEntry(pokemonSpecies);
     return `
     <h2 id="pokemon-legendary-or-mythical">${isLegendaryorMythical(pokemonSpecies)}</h2>
     <h3 id="pokemon-name">Pokemon: ${pokemonSpecies.name.toUpperCase()}</h3>
     <p id="pokemon-number">Dex Number: ${pokemonSpecies.id}</p>
-    <p id="pokemon-dex-entry">Dex Entry: ${checkForDexEntry(pokemonSpecies)}</p>
+    <p id="pokemon-dex-entry">Dex Entry: ${dexEntry}</p>
+    <span id="pokemon-image">
+    
             `
   };
 
@@ -36,9 +51,8 @@ export function pokemonFunFactTemplate(pokemonSpecies){
         return `Unavailable`;
     }
     else {
+        return ` ${pokemonSpecies.flavor_text_entries[0].flavor_text}`;
 
-
-        return ` ${pokemonSpecies.flavor_text_entries[6].flavor_text}`;
     }
   }
 
@@ -54,3 +68,18 @@ export function pokemonFunFactTemplate(pokemonSpecies){
     }
   }
 
+ async function FunFactImage(pokemonSpecies){
+    const pokemonImage = await getPokemonByPokedexNumber(pokemonSpecies.id);
+    const pokemonFunFact = document.querySelector(".FunFacts");
+    const pokemonElementImage = document.createElement("img");
+    pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
+    pokemonFunFact.appendChild(pokemonElementImage);
+  }
+
+  async function FunFactImage2(pokemonSpecies2){
+    const pokemonImage = await getPokemonByPokedexNumber(pokemonSpecies2.id);
+    const pokemonFunFact = document.querySelector(".FunFacts2");
+    const pokemonElementImage = document.createElement("img");
+    pokemonElementImage.src = `${pokemonImage.sprites.front_default}`;
+    pokemonFunFact.appendChild(pokemonElementImage);
+  }

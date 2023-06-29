@@ -98,6 +98,28 @@ header img{
 }
 /* End of Navigation css */
 
+/* Begin of Fun Fact css */
+#FunfactsDiv{
+    border-style: double;
+    max-width: 50%;
+    padding-left: 4%;
+    padding-bottom: 4%;
+}
+.FunFacts{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-style: solid;
+    max-width: 80%;
+}
+.FunFacts2{
+    padding-left: 2%;
+    padding-right: 2%;
+    border-style: solid;
+    max-width: 80%;
+}
+/* End of Fun Fact css */
+
+
 /* footer css */
 footer {
     padding: 30px;
