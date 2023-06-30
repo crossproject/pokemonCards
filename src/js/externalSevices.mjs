@@ -13,6 +13,11 @@ function convertToJson(res) {
 export async function getPokemonByPokedexNumber(id) {
   const response = await fetch(baseURL + `pokemon/${id}`);
   const pokemon = await convertToJson(response);
-  console.log(pokemon);
+   return pokemon;
+}
+
+export async function getSpeciesByPokedexNumber(id) {
+  const response = await fetch(baseURL + `pokemon-species/${id}`);
+  const pokemon = await convertToJson(response);
    return pokemon;
 }
