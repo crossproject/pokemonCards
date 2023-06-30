@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Cards | Home</title>
     <link rel="stylesheet" href="/css/main.css" />
-
+    <script src="./js/carousel.js" defer></script>
     <script src="./js/main.js" type="module"></script>
   </head>
   <body>
@@ -14,13 +14,49 @@
 
 
     <main id="divider">
-      <section aria-label="Newest Photos">
-        <ul>
-          <li class="slide">
-            <img src="" alt="">
-          </li>
-        </ul>
-      </section>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">1 / 6</div> -->
+          <img src="images/main.png" alt="main Pokemon Hero Image">
+        </div>
+        
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">2 / 6</div> -->
+          <img src="images/regions.png" alt="regions Pokemon Hero Image">
+        </div>
+        
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">3 / 6</div> -->
+          <img src="images/cutePokemon.png" alt="main Pokemon Hero Image">
+        </div>
+        
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">4 / 6</div> -->
+          <img src="images/store.png" alt="main Pokemon Hero Image">
+        </div>
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">5 / 6</div> -->
+          <img src="images/random.png" alt="main Pokemon Hero Image">
+        </div>
+
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">6 / 6</div> -->
+          <img src="images/deckCards.png" alt="main Pokemon Hero Image">
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+          <span class="dot" onclick="currentSlide(6)"></span> 
+        </div>
     
       
     </main>

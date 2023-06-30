@@ -95,11 +95,27 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    width: 100%;
     margin:0 auto;
+    position: relative;
   }
 /* end of footer */
-
+/* carousel csss */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+  
+  .mySlides {
+    text-align: center;
+  }
+/* end of carousel css */
 /* Phone media query */
 @media screen and (max-width: 426px){
     header{
