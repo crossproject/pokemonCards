@@ -1,4 +1,5 @@
 const baseURL = "https://pokeapi.co/api/v2/";
+const authURL = import.meta.env.VITE_SERVER_URL;
 
 function convertToJson(res) {
     if (res.ok) {
@@ -20,4 +21,16 @@ export async function getSpeciesByPokedexNumber(id) {
   const response = await fetch(baseURL + `pokemon-species/${id}`);
   const pokemon = await convertToJson(response);
    return pokemon;
+}
+
+export async function loginRequest(creds){
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(creds),
+  };
+  const response = await fetch(authURL + "login", options).then(convertToJson);
+  return response.accessToken;
 }
