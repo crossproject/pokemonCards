@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-body{
-    background: white;
-    max-width: 1000px;
-    margin:0 auto;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  background: white;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* Navigation css */
-header{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    background-color: #ffde00;
-    list-style-type: none;
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr; */
-    /* grid-template-columns: 2fr 1fr 1fr 1fr 2fr; */
-    grid-template-columns: 1fr;
-    /* justify-items: center; */
-    padding-bottom: 20px;
-    padding-top: 10px;
+header {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  background-color: #ffde00;
+  list-style-type: none;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr; */
+  /* grid-template-columns: 2fr 1fr 1fr 1fr 2fr; */
+  grid-template-columns: 1fr;
+  /* justify-items: center; */
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 /* #firstPartMenu{
@@ -31,12 +31,12 @@ header{
     padding-left: 20px;
 } */
 
-#secondPartMenu{
-    grid-column: 2;
-    grid-row: 3;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+#secondPartMenu {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
 /* second li for ID secondPartMenu "Deck Cards" */
@@ -44,109 +44,108 @@ header{
     padding-left: 20px;
 } */
 
-#title{
-    /* grid-column: 3; */
-    grid-column: 2;
-    grid-row: 1;
-    /* justify-self: end; */
+#title {
+  /* grid-column: 3; */
+  grid-column: 2;
+  grid-row: 1;
+  /* justify-self: end; */
 }
 
-header img{
-    /* grid-column: 4; */
-    grid-column: 3;
-    grid-row: 1;
-    justify-self: center;
-
+header img {
+  /* grid-column: 4; */
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: center;
 }
 
-#title2{
-    /* grid-column: 5; */
-    grid-column: 4;
-    grid-row: 1;
-    /* justify-self: start; */
+#title2 {
+  /* grid-column: 5; */
+  grid-column: 4;
+  grid-row: 1;
+  /* justify-self: start; */
 }
 
-#thirdPartMenu{
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+#thirdPartMenu {
+  grid-column: 3;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-#forthPartMenu{
-    grid-column: 4;
-    grid-row: 3;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+#forthPartMenu {
+  grid-column: 4;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-#navImage{
-    max-width: 70%;
-    margin: 0;
+#navImage {
+  max-width: 70%;
+  margin: 0;
 }
 
-.logo2{
-    max-width: 80%;
-    padding-top: 20px;
+.logo2 {
+  max-width: 80%;
+  padding-top: 20px;
 }
 
-.logo1{
-    max-width: 100%;
-    padding-top: 20px;
+.logo1 {
+  max-width: 100%;
+  padding-top: 20px;
 }
 /* End of Navigation css */
 
 /* Begin of Fun Fact css */
-#FunfactsDiv{
-    border-style: double;
-    max-width: 50%;
-    padding-left: 4%;
-    padding-bottom: 4%;
+#FunfactsDiv {
+  border-style: double;
+  max-width: 50%;
+  padding-left: 4%;
+  padding-bottom: 4%;
 }
-.FunFacts{
-    padding-left: 2%;
-    padding-right: 2%;
-    border-style: solid;
-    max-width: 80%;
+.FunFacts {
+  padding-left: 2%;
+  padding-right: 2%;
+  border-style: solid;
+  max-width: 80%;
 }
-.FunFacts2{
-    padding-left: 2%;
-    padding-right: 2%;
-    border-style: solid;
-    max-width: 80%;
+.FunFacts2 {
+  padding-left: 2%;
+  padding-right: 2%;
+  border-style: solid;
+  max-width: 80%;
 }
 .FunFacts img {
-    width: 60%;
+  width: 60%;
 }
 .FunFacts2 img {
-    width: 60%;
+  width: 60%;
 }
 /* End of Fun Fact css */
 
-
 /* footer css */
 footer {
-    padding: 30px;
-    background: #ffde00;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1000px;
-    margin:0 auto;
-  }
+  padding: 30px;
+  background: #ffde00;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 /* end of footer */
 
 /* Phone media query */
-@media screen and (max-width: 426px){
-    header{
-        font-size: 10px;
-    }
+@media screen and (max-width: 426px) {
+  header {
+    font-size: 10px;
+  }
 
-    #secondPartMenu, #thirdPartMenu, #forthPartMenu{
-        padding: 5px 0 5px 0;
-    }
+  #secondPartMenu,
+  #thirdPartMenu,
+  #forthPartMenu {
+    padding: 5px 0 5px 0;
+  }
 }
-
