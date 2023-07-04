@@ -96,7 +96,7 @@ header {
 /* Begin of Fun Fact css */
 #FunfactsDiv {
   border-style: double;
-  max-width: 50%;
+  max-width: 100%;
   padding-left: 4%;
   padding-bottom: 4%;
   background-color: #CC0000;
@@ -136,7 +136,13 @@ header {
   margin-bottom: 0;
 }
 /* End of Fun Fact css */
+/* main grid css */
 
+/* end of main grid css */
+#divider{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 /* footer css */
 footer {
   padding: 30px;
