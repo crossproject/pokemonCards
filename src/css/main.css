@@ -189,4 +189,10 @@ footer {
   #title img {
     padding-left: 3px;
   }
+  #divider{
+    display: block;
+  }
+  .slideshow-container{
+    display: none;
+  }
 }
