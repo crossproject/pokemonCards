@@ -100,6 +100,8 @@ header {
   padding-left: 4%;
   padding-bottom: 4%;
   background-color: #CC0000;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .FunFacts,
@@ -136,13 +138,29 @@ header {
   margin-bottom: 0;
 }
 /* End of Fun Fact css */
-/* main grid css */
 
-/* end of main grid css */
+/* main grid css */
 #divider{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+#login-div{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.slideshow-container{
+  grid-column: 1/3;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mySlides {
+  text-align: center;
+}
+/* end of main grid css */
+
 /* footer css */
 footer {
   padding: 30px;
