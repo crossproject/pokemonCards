@@ -106,10 +106,10 @@ header {
 
 .FunFacts,
 .FunFacts2 {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 2%;
   border-style: solid;
   max-width: 80%;
+  margin: 0 auto;
   background-color: white;
 }
 
