@@ -68,11 +68,11 @@ header {
   padding-left: 8px;
 }
 
-#title1 img{
+#title1 img {
   max-width: 100%;
 }
 
-#title2 img{
+#title2 img {
   max-width: 70%;
 }
 
@@ -99,7 +99,7 @@ header {
   max-width: 100%;
   padding-left: 4%;
   padding-bottom: 4%;
-  background-color: #CC0000;
+  background-color: #cc0000;
   grid-column: 1;
   grid-row: 2;
 }
@@ -113,7 +113,7 @@ header {
   background-color: white;
 }
 
-.FunFacts img, 
+.FunFacts img,
 .FunFacts2 img {
   width: 80%;
   display: block;
@@ -121,35 +121,36 @@ header {
   padding-bottom: 10px;
 }
 
-#FunfactsDiv h1{
+#FunfactsDiv h1 {
   text-align: center;
   color: white;
 }
 
-#pokemon-name{
+#pokemon-name {
   text-align: center;
 }
 
-#pokemon-dex-entry, #pokemon-number{
+#pokemon-dex-entry,
+#pokemon-number {
   font-size: 17px;
 }
 
-#pokemon-dex-entry{
+#pokemon-dex-entry {
   margin-bottom: 0;
 }
 /* End of Fun Fact css */
 
 /* main grid css */
-#divider{
+#divider {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#login-div{
+#login-div {
   grid-column: 2;
   grid-row: 2;
 }
 
-.slideshow-container{
+.slideshow-container {
   grid-column: 1/3;
   grid-row: 1;
   display: flex;
@@ -189,10 +190,10 @@ footer {
   #title img {
     padding-left: 3px;
   }
-  #divider{
+  #divider {
     display: block;
   }
-  .slideshow-container{
+  .slideshow-container {
     display: none;
   }
 }
