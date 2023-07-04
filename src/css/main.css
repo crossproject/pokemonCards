@@ -12,10 +12,9 @@ header {
   background-color: #ffde00;
   list-style-type: none;
   display: grid;
-  /* grid-template-columns: 1fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr; */
-  /* grid-template-columns: 2fr 1fr 1fr 1fr 2fr; */
-  grid-template-columns: 1fr;
-  /* justify-items: center; */
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  justify-items: center;
+  align-items: center;
   padding-bottom: 20px;
   padding-top: 10px;
 }
@@ -33,7 +32,7 @@ header {
 
 #secondPartMenu {
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -44,30 +43,42 @@ header {
     padding-left: 20px;
 } */
 
-#title {
-  /* grid-column: 3; */
+#title1 {
   grid-column: 2;
   grid-row: 1;
-  /* justify-self: end; */
+  justify-self: end;
 }
 
-header img {
-  /* grid-column: 4; */
+#title {
   grid-column: 3;
   grid-row: 1;
-  justify-self: center;
+  display: flex; /* Added display property */
+  justify-content: center; /* Added justify-content property */
+  align-items: center; /* Added align-items property */
 }
 
 #title2 {
-  /* grid-column: 5; */
   grid-column: 4;
   grid-row: 1;
   /* justify-self: start; */
 }
 
+#title img {
+  max-width: 80%;
+  padding-left: 8px;
+}
+
+#title1 img{
+  max-width: 100%;
+}
+
+#title2 img{
+  max-width: 70%;
+}
+
 #thirdPartMenu {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 2;
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -75,54 +86,80 @@ header img {
 
 #forthPartMenu {
   grid-column: 4;
-  grid-row: 3;
+  grid-row: 2;
   display: flex;
   justify-content: center;
   padding: 10px;
-}
-
-#navImage {
-  max-width: 70%;
-  margin: 0;
-}
-
-.logo2 {
-  max-width: 80%;
-  padding-top: 20px;
-}
-
-.logo1 {
-  max-width: 100%;
-  padding-top: 20px;
 }
 /* End of Navigation css */
 
 /* Begin of Fun Fact css */
 #FunfactsDiv {
   border-style: double;
-  max-width: 50%;
+  max-width: 100%;
   padding-left: 4%;
   padding-bottom: 4%;
+  background-color: #CC0000;
+  grid-column: 1;
+  grid-row: 2;
 }
-.FunFacts {
-  padding-left: 2%;
-  padding-right: 2%;
-  border-style: solid;
-  max-width: 80%;
-}
+
+.FunFacts,
 .FunFacts2 {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 2%;
   border-style: solid;
   max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
 }
-.FunFacts img {
-  width: 60%;
-}
+
+.FunFacts img, 
 .FunFacts2 img {
-  width: 60%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+#FunfactsDiv h1{
+  text-align: center;
+  color: white;
+}
+
+#pokemon-name{
+  text-align: center;
+}
+
+#pokemon-dex-entry, #pokemon-number{
+  font-size: 17px;
+}
+
+#pokemon-dex-entry{
+  margin-bottom: 0;
 }
 /* End of Fun Fact css */
+
+/* main grid css */
+#divider{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#login-div{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.slideshow-container{
+  grid-column: 1/3;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mySlides {
+  text-align: center;
+}
+/* end of main grid css */
 
 /* footer css */
 footer {
@@ -147,5 +184,15 @@ footer {
   #thirdPartMenu,
   #forthPartMenu {
     padding: 5px 0 5px 0;
+  }
+
+  #title img {
+    padding-left: 3px;
+  }
+  #divider{
+    display: block;
+  }
+  .slideshow-container{
+    display: none;
   }
 }
