@@ -162,6 +162,14 @@ header {
 }
 /* end of main grid css */
 
+/*Regions CSS*/
+div img {
+  width: 450px;
+  max-height: 500px;
+}
+/*end of regions css*/
+
+
 /* footer css */
 footer {
   padding: 30px;
