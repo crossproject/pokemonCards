@@ -49,12 +49,14 @@ header {
   justify-self: end;
 }
 
+
+
 #title {
   grid-column: 3;
   grid-row: 1;
-  display: flex; /* Added display property */
-  justify-content: center; /* Added justify-content property */
-  align-items: center; /* Added align-items property */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 #title2 {
@@ -90,6 +92,11 @@ header {
   display: flex;
   justify-content: center;
   padding: 10px;
+}
+
+li a{
+  text-decoration: none;
+  
 }
 /* End of Navigation css */
 
