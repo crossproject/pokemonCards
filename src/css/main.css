@@ -163,7 +163,12 @@ header {
 /* end of main grid css */
 
 /*Regions CSS*/
-div img {
+.Regions {
+  border-style: solid;
+  margin: 10px;
+  padding-left: 10px;
+}
+.Regions img {
   width: 450px;
   max-height: 500px;
 }
