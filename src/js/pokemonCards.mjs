@@ -23,6 +23,7 @@ export function generatePokemonDetailsTemplate(pokemon) {
     <div class="pokemon-card">
       <h1 id="pokemonName"> ${pokemon.name}</h1>
       <img id="pokemonImage" src="${pokemon.sprites.front_default}">
+      <hr class="card-line">
       <p id="pokemonNumber">Dex number: ${pokemon.id}</p>
       <p id="regionOfOrigin">Region: ${getRegion(pokemon)}</p>
       <p id="pokemonHeight">Height: ${pokemon.height / 10} m</p>

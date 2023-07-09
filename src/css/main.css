@@ -250,8 +250,9 @@ footer {
 }
 
 #pokemonName {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
 
 #pokemonImage {
@@ -266,8 +267,26 @@ footer {
 
 .pokemon-details p {
   margin: 5px 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 20px;
+}
+
+.pokemon-card p{
+  font-family: "Open Sans", sans-serif;
+}
+
+.card-line {
+  border: none;
+  border-top: 1px solid #CC0000;
+  margin: 10px 0;
+}
+
+.pokemon-card::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #CC0000;
+  margin: 10px auto;
+  width: 80%;
 }
 /* end of styles for the Pokemon cards */
 
