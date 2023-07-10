@@ -23,6 +23,12 @@ export async function getSpeciesByPokedexNumber(id) {
    return pokemon;
 }
 
+export async function getRegionData(id) {
+  const response = await fetch(baseURL +`region/${id}`);
+  const region = await convertToJson(response);
+  return region;
+}
+
 export async function loginRequest(creds){
   const options = {
     method: "POST",

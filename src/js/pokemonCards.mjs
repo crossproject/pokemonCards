@@ -7,6 +7,7 @@ export default async function pokemonDetails(pokemonId) {
           if (pokemon === undefined) {
         throw Error();        
       }
+      console.log( document.querySelector(".pokemon-card"))
       const pokemonDetails = document.querySelector(".pokemon-card");
       await renderWithTemplate(pokemonDetailsTemplate,pokemonDetails,pokemon);
 
