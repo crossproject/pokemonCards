@@ -49,12 +49,14 @@ header {
   justify-self: end;
 }
 
+
+
 #title {
   grid-column: 3;
   grid-row: 1;
-  display: flex; /* Added display property */
-  justify-content: center; /* Added justify-content property */
-  align-items: center; /* Added align-items property */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 #title2 {
@@ -90,6 +92,15 @@ header {
   display: flex;
   justify-content: center;
   padding: 10px;
+}
+
+li a{
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover{
+  color: white;
 }
 /* End of Navigation css */
 
@@ -144,23 +155,70 @@ header {
 #divider {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-#login-div {
-  grid-column: 2;
-  grid-row: 2;
+  grid-gap: 20px;
 }
 
 .slideshow-container {
   grid-column: 1/3;
-  grid-row: 1;
+  grid-row: 1/2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mySlides {
-  text-align: center;
+
+#FunfactsDiv {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.login-container {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-div {
+  width: 300px;
+  padding: 20px;
+  background-color: #3B4CCA;
+  border: 1px solid #3B4CCA;
+  border-radius: 5px;
 }
 /* end of main grid css */
+
+/* login section css */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #CC0000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #FF0000;
+}
+/* end of login section css */
 
 /* footer css */
 footer {
@@ -174,6 +232,63 @@ footer {
   margin: 0 auto;
 }
 /* end of footer */
+/* Styles for the Pokemon cards */
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pokemon-card {
+  background-color: #B3A125;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #3B4CCA;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+#pokemonName {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+#pokemonImage {
+  width: 150px;
+  height: 150px;
+  /* margin: 10px auto; */
+}
+
+.pokemon-details {
+  margin-top: 10px;
+}
+
+.pokemon-details p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.pokemon-card p{
+  font-family: "Open Sans", sans-serif;
+}
+
+.card-line {
+  border: none;
+  border-top: 1px solid #CC0000;
+  margin: 10px 0;
+}
+
+.pokemon-card::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #CC0000;
+  margin: 10px auto;
+  width: 80%;
+}
+/* end of styles for the Pokemon cards */
 
 /* Phone media query */
 @media screen and (max-width: 426px) {
