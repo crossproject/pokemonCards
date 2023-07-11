@@ -3,7 +3,6 @@ import { getRegionData } from "./externalSevices.mjs";
 
 export async function addRegionPOI() {
 
-    // get the list of products 
     const kantoData = await getRegionData(1);
     console.log(kantoData);
     const Kanto = document.getElementById("Kanto");
@@ -26,8 +25,6 @@ export async function addRegionPOI() {
     list.appendChild(node);
     Johto.appendChild(list);   
         }
-     
-
     }
 
     const hoennData = await getRegionData(3);
