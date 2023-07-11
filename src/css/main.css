@@ -290,6 +290,18 @@ footer {
 }
 /* end of styles for the Pokemon cards */
 
+/*Regions CSS*/
+.Regions {
+  border-style: solid;
+  margin: 10px;
+  padding-left: 10px;
+}
+.Regions img {
+  width: 450px;
+  max-height: 500px;
+}
+/*end of regions css*/
+
 /* Phone media query */
 @media screen and (max-width: 426px) {
   header {
