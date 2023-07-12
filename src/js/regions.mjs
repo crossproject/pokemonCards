@@ -1,6 +1,5 @@
 import { getRegionData } from "./externalSevices.mjs";
 
-
 export async function addRegionPOI() {
 
     const kantoData = await getRegionData(1);
@@ -142,3 +141,4 @@ export async function addRegionPOI() {
         }
     }
   }
+
