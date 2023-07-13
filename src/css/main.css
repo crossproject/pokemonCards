@@ -232,6 +232,7 @@ footer {
   margin: 0 auto;
 }
 /* end of footer */
+
 /* Styles for the Pokemon cards */
 .pokemon-cards {
   display: flex;
@@ -301,6 +302,27 @@ footer {
   max-height: 500px;
 }
 /*end of regions css*/
+
+/* filter css */
+#filterInput {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+}
+
+#typeFilter {
+  padding: 5px;
+  width: 200px;
+}
+
+.pokemon-card.filtered {
+  display: block;
+}
+
+.pokemon-card.hidden {
+  display: none;
+}
+/* End of filter css */
 
 /* Phone media query */
 @media screen and (max-width: 426px) {

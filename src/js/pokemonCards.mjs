@@ -3,6 +3,8 @@ import { getPokemonByPokedexNumber } from "./externalSevices.mjs";
 export default async function pokemonDetails(pokemonIds) {
   try {
     const container = document.querySelector(".pokemon-cards");
+    const filterInput = document.getElementById("filterInput");
+    const typeFilter = document.getElementById("typeFilter");
 
     for (const pokemonId of pokemonIds) {
       const pokemon = await getPokemonByPokedexNumber(pokemonId);
@@ -13,10 +15,40 @@ export default async function pokemonDetails(pokemonIds) {
       const template = generatePokemonDetailsTemplate(pokemon);
       renderPokemonDetails(template, container);
     }
+
+    filterInput.addEventListener("input", applyFilters);
+    typeFilter.addEventListener("change", applyFilters);
+
+    // eslint-disable-next-line no-inner-declarations
+    function applyFilters() {
+      const filterValue = filterInput.value.toLowerCase();
+      const selectedType = typeFilter.value.toLowerCase();
+      const pokemonCards = container.querySelectorAll(".pokemon-card");
+
+      pokemonCards.forEach((card) => {
+        const pokemonName = card.querySelector("#pokemonName").textContent.toLowerCase();
+        const pokemonNumber = card.querySelector("#pokemonNumber").textContent.toLowerCase();
+        const pokemonType = card.querySelector("#pokemonType1").textContent.toLowerCase();
+        
+        const nameMatch = pokemonName.includes(filterValue);
+        const numberMatch = pokemonNumber.includes(filterValue);
+        const typeMatch = selectedType === "all" || pokemonType.includes(selectedType);
+
+        if (nameMatch || numberMatch) {
+          card.classList.add("filtered"); // Add the filtered class
+          card.style.display = typeMatch ? "block" : "none";
+        } else {
+          card.classList.remove("filtered"); // Remove the filtered class
+          card.style.display = "none";
+        }
+      });
+    }
   } catch (error) {
     console.error(error);
   }
 }
+
+
 
 export function generatePokemonDetailsTemplate(pokemon) {
   return `
@@ -37,6 +69,7 @@ export function generatePokemonDetailsTemplate(pokemon) {
 
 export function renderPokemonDetails(template, container) {
   const card = document.createElement("div");
+  card.classList.add("pokemon-card");
   card.innerHTML = template;
   container.appendChild(card);
 }
