@@ -14,12 +14,25 @@ export default async function pokemonDetails(pokemonIds) {
       renderPokemonDetails(template, container);
     }
 
-
+const regionMons =  getParam("pokemon");
+    if (regionMons != null) {
+      document.getElementById("chooseRegion").value = regionMons;
+      document.getElementById("chooseRegion").addEventListener("onload", selectRegion, true);
+      console.log(regionMons)
+    }
     document.getElementById("chooseRegion").addEventListener("change", selectRegion);
 
   } catch (error) {
     console.error(error);
   }
+}
+
+
+export function getParam(param) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const pokemon = urlParams.get(param);
+  return pokemon;
 }
 
 export function generatePokemonDetailsTemplate(pokemon) {
@@ -45,13 +58,12 @@ export function renderPokemonDetails(template, container) {
   container.appendChild(card);
 }
 
-export function selectRegion() {
+ function selectRegion() {
   let startId = 0; 
   let endId = 0; 
   for (let x = 0; x < document.getElementsByClassName("pokemon-card").length; x++){
   document.querySelector(".pokemon-cards").innerHTML="";
 
-  console.log(x)
   }
 
   if (this.value == "Kanto"){
