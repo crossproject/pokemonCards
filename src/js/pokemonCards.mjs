@@ -45,7 +45,7 @@ export function renderPokemonDetails(template, container) {
   container.appendChild(card);
 }
 
-function selectRegion() {
+export function selectRegion() {
   let startId = 0; 
   let endId = 0; 
   for (let x = 0; x < document.getElementsByClassName("pokemon-card").length; x++){

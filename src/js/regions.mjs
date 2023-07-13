@@ -106,8 +106,6 @@ export async function addRegionPOI() {
     }
         }
 
-
-
     const hisuiData = await getRegionData(9);
     console.log(hisuiData);
     const Hisui = document.getElementById("Hisui");
