@@ -21,24 +21,24 @@ export default async function pokemonDetails(pokemonIds) {
 
     // eslint-disable-next-line no-inner-declarations
     function applyFilters() {
-      const filterValue = filterInput.value.toLowerCase();
+      const filterValue = filterInput.value.toLowerCase().trim();
       const selectedType = typeFilter.value.toLowerCase();
       const pokemonCards = container.querySelectorAll(".pokemon-card");
-
+    
       pokemonCards.forEach((card) => {
         const pokemonName = card.querySelector("#pokemonName").textContent.toLowerCase();
         const pokemonNumber = card.querySelector("#pokemonNumber").textContent.toLowerCase();
+        const regionOfOrigin = card.querySelector("#regionOfOrigin").textContent.toLowerCase();
         const pokemonType = card.querySelector("#pokemonType1").textContent.toLowerCase();
-        
+    
         const nameMatch = pokemonName.includes(filterValue);
         const numberMatch = pokemonNumber.includes(filterValue);
+        const regionMatch = regionOfOrigin.includes(filterValue) || regionOfOrigin.toLowerCase() === filterValue;
         const typeMatch = selectedType === "all" || pokemonType.includes(selectedType);
-
-        if (nameMatch || numberMatch) {
-          card.classList.add("filtered"); // Add the filtered class
-          card.style.display = typeMatch ? "block" : "none";
+    
+        if ((nameMatch || numberMatch || regionMatch) && typeMatch) {
+          card.style.display = "block";
         } else {
-          card.classList.remove("filtered"); // Remove the filtered class
           card.style.display = "none";
         }
       });
