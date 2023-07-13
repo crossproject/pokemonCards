@@ -13,6 +13,10 @@ export default async function pokemonDetails(pokemonIds) {
       const template = generatePokemonDetailsTemplate(pokemon);
       renderPokemonDetails(template, container);
     }
+
+
+    document.getElementById("chooseRegion").addEventListener("change", selectRegion);
+
   } catch (error) {
     console.error(error);
   }
@@ -41,6 +45,60 @@ export function renderPokemonDetails(template, container) {
   container.appendChild(card);
 }
 
+function selectRegion() {
+  let startId = 0; 
+  let endId = 0; 
+  for (let x = 0; x < document.getElementsByClassName("pokemon-card").length; x++){
+  document.querySelector(".pokemon-cards").innerHTML="";
+
+  console.log(x)
+  }
+
+  if (this.value == "Kanto"){
+     startId = 1; 
+     endId = 151; 
+  }
+ else if (this.value == "Johto"){
+    startId = 152;
+    endId = 251;
+  }
+  else if (this.value == "Hoenn"){
+    startId = 252;
+    endId = 386;
+  }
+  else if (this.value == "Sinnoh"){
+    startId = 387;
+    endId = 493;
+  }
+  else if (this.value == "Unova"){
+    startId = 494;
+    endId = 649;
+  }
+  else if (this.value == "Kalos"){
+    startId = 650;
+    endId = 721;
+  }
+  else if (this.value == "Alola"){
+    startId = 722;
+    endId = 809;
+  }
+  else if (this.value == "Galar"){
+    startId = 810;
+    endId = 905;
+  }
+  else if (this.value == "Hisui"){
+    startId = 810;
+    endId = 905;
+  }
+  else if (this.value == "Paldea"){
+    startId = 906;
+    endId = 1010;
+  }
+  const pokemonIds = Array.from({ length: endId - startId + 1 }, (_, index) => startId + index);
+pokemonDetails(pokemonIds);
+
+}
+
 function type2(pokemon) {
   if (pokemon.types[1] !== undefined) {
     return `${pokemon.types[1].type.name}`;
@@ -56,6 +114,8 @@ function baseStatTotal(pokemon) {
   }
   return total;
 }
+
+
 
 function getRegion(pokemon) {
   if (pokemon.id < 152) {
