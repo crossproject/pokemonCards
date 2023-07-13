@@ -42,6 +42,8 @@ export default async function pokemonDetails(pokemonIds) {
           card.style.display = "none";
         }
       });
+      console.log(container);
+      console.log("R")
     }
   } catch (error) {
     console.error(error);
@@ -52,7 +54,6 @@ export default async function pokemonDetails(pokemonIds) {
 
 export function generatePokemonDetailsTemplate(pokemon) {
   return `
-    <div class="pokemon-card">
       <h1 id="pokemonName"> ${pokemon.name}</h1>
       <img id="pokemonImage" src="${pokemon.sprites.front_default}">
       <hr class="card-line">
@@ -63,7 +64,6 @@ export function generatePokemonDetailsTemplate(pokemon) {
       <p id="pokemonType1">Type: ${pokemon.types[0].type.name} ${type2(pokemon)}</p>
       <p id="pokemonAbility">Ability: ${pokemon.abilities[0].ability.name}</p>
       <p id="statTotal">Base Stat total: ${baseStatTotal(pokemon)}</p>
-    </div>
   `;
 }
 
