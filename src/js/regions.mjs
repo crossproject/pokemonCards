@@ -1,6 +1,5 @@
 import { getRegionData } from "./externalSevices.mjs";
 
-
 export async function addRegionPOI() {
 
     const kantoData = await getRegionData(1);
@@ -107,8 +106,6 @@ export async function addRegionPOI() {
     }
         }
 
-
-
     const hisuiData = await getRegionData(9);
     console.log(hisuiData);
     const Hisui = document.getElementById("Hisui");
@@ -142,3 +139,4 @@ export async function addRegionPOI() {
         }
     }
   }
+
