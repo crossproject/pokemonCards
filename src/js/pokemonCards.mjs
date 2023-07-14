@@ -14,12 +14,11 @@ export default async function pokemonDetails(pokemonIds) {
       renderPokemonDetails(template, container);
     }
 
-const regionMons =  getParam("pokemon");
+    const regionMons =  getParam("pokemon");
     if (regionMons != null) {
       document.getElementById("chooseRegion").value = regionMons;
-      document.getElementById("chooseRegion").addEventListener("onload", selectRegion, true);
-      console.log(regionMons)
     }
+    console.log(document.getElementById("chooseRegion").selectedIndex)
     document.getElementById("chooseRegion").addEventListener("change", selectRegion);
 
   } catch (error) {
@@ -58,7 +57,7 @@ export function renderPokemonDetails(template, container) {
   container.appendChild(card);
 }
 
- function selectRegion() {
+ export function selectRegion() {
   let startId = 0; 
   let endId = 0; 
   for (let x = 0; x < document.getElementsByClassName("pokemon-card").length; x++){
@@ -66,7 +65,51 @@ export function renderPokemonDetails(template, container) {
 
   }
 
-  if (this.value == "Kanto"){
+if (this == undefined) {
+  const randomMons = getParam("pokemon");
+  if (randomMons == "Kanto"){
+    startId = 1; 
+    endId = 151; 
+ }
+else if (randomMons == "Johto"){
+   startId = 152;
+   endId = 251;
+ }
+ else if (randomMons == "Hoenn"){
+   startId = 252;
+   endId = 386;
+ }
+ else if (randomMons == "Sinnoh"){
+   startId = 387;
+   endId = 493;
+ }
+ else if (randomMons == "Unova"){
+   startId = 494;
+   endId = 649;
+ }
+ else if (randomMons == "Kalos"){
+   startId = 650;
+   endId = 721;
+ }
+ else if (randomMons == "Alola"){
+   startId = 722;
+   endId = 809;
+ }
+ else if (randomMons == "Galar"){
+   startId = 810;
+   endId = 905;
+ }
+ else if (randomMons == "Hisui"){
+   startId = 810;
+   endId = 905;
+ }
+ else if (randomMons == "Paldea"){
+   startId = 906;
+   endId = 1010;
+ }
+}
+else {
+    if (this.value == "Kanto"){
      startId = 1; 
      endId = 151; 
   }
@@ -106,9 +149,9 @@ export function renderPokemonDetails(template, container) {
     startId = 906;
     endId = 1010;
   }
+}
   const pokemonIds = Array.from({ length: endId - startId + 1 }, (_, index) => startId + index);
-pokemonDetails(pokemonIds);
-
+  pokemonDetails(pokemonIds);
 }
 
 function type2(pokemon) {
