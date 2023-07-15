@@ -40,3 +40,13 @@ export async function loginRequest(creds){
   const response = await fetch(authURL + "login", options).then(convertToJson);
   return response.accessToken;
 }
+
+export async function getRandomPokemon(){
+  let randomPokemon = Math.floor(Math.random() * 1011);
+  if (randomPokemon == 0 || randomPokemon == 1011){
+       randomPokemon = 1;
+  }
+  
+  let pokemon = await getPokemonByPokedexNumber(randomPokemon);
+  return pokemon;
+};
