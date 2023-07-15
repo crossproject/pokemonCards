@@ -288,21 +288,32 @@ footer {
   margin: 10px auto;
   width: 80%;
 }
+.deck select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.deck label {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.deck option {
+  font-size: 14px;
+}
 /* end of styles for the Pokemon cards */
 
 /*Regions CSS*/
+
 .Regions {
   border-style: solid;
   margin: 10px;
   padding-left: 10px;
-}
-.Regions img {
-  width: 450px;
-  max-height: 500px;
-}
-/*end of regions css*/
-/* Deck Regions */
-.Regions {
   max-width: 400px;
   margin: 20px;
   padding: 20px;
