@@ -57,6 +57,8 @@ export function renderPokemonDetails(template, container) {
   container.appendChild(card);
 }
 
+
+
  export function selectRegion() {
   let startId = 0; 
   let endId = 0; 
