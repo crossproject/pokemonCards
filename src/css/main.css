@@ -372,6 +372,7 @@ footer {
 }
 
 #chooseRegion {
+  font-family: "Open Sans", sans-serif;
   width: 200px;
   padding: 10px;
   font-size: 16px;
@@ -380,11 +381,14 @@ footer {
   margin: 10px;
 }
 #chooseRegion option {
+  font-family: "Open Sans", sans-serif;
   background-color: #fff;
   color: #000;
   margin: 10px;
 }
+
 label {
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   
 }
