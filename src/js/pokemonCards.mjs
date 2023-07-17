@@ -58,62 +58,48 @@ export function renderPokemonDetails(template, container) {
 }
 
 export function selectRegion() {
-  let startId = 0; 
-  let endId = 0; 
-  
+  let startId = 0;
+  let endId = 0;
+
   // Clear the existing pokemon cards
   document.querySelector(".pokemon-cards").innerHTML = "";
 
-  if (this == undefined || this.value == "All") {
-
-    startId = 1; 
-    endId = 1010; 
-    
-  } else {
-    // Display specific region based on the selected value
-    if (this.value == "Kanto"){
-      startId = 1; 
-      endId = 151; 
-    }
-    else if (this.value == "Johto"){
-      startId = 152;
-      endId = 251;
-    }
-    else if (this.value == "Hoenn"){
-      startId = 252;
-      endId = 386;
-    }
-    else if (this.value == "Sinnoh"){
-      startId = 387;
-      endId = 493;
-    }
-    else if (this.value == "Unova"){
-      startId = 494;
-      endId = 649;
-    }
-    else if (this.value == "Kalos"){
-      startId = 650;
-      endId = 721;
-    }
-    else if (this.value == "Alola"){
-      startId = 722;
-      endId = 809;
-    }
-    else if (this.value == "Galar"){
-      startId = 810;
-      endId = 905;
-    }
-    else if (this.value == "Hisui"){
-      startId = 810;
-      endId = 905;
-    }
-    else if (this.value == "Paldea"){
-      startId = 906;
-      endId = 1010;
-    }
+  if (this.value == "All") {
+    startId = 1;
+    endId = 1010;
+  } else if (this.value == "Kanto") {
+    startId = 1;
+    endId = 151;
+  } else if (this.value == "Johto") {
+    startId = 152;
+    endId = 251;
+  } else if (this.value == "Hoenn") {
+    startId = 252;
+    endId = 386;
+  } else if (this.value == "Sinnoh") {
+    startId = 387;
+    endId = 493;
+  } else if (this.value == "Unova") {
+    startId = 494;
+    endId = 649;
+  } else if (this.value == "Kalos") {
+    startId = 650;
+    endId = 721;
+  } else if (this.value == "Alola") {
+    startId = 722;
+    endId = 809;
+  } else if (this.value == "Galar") {
+    startId = 810;
+    endId = 898;
+  } else if (this.value == "Hisui") {
+    startId = 899;
+    endId = 1010;
   }
-  
-  const pokemonIds = Array.from({ length: endId - startId + 1 }, (_, index) => startId + index);
+
+  const pokemonIds = Array.from(
+    { length: endId - startId + 1 },
+    (_, index) => startId + index
+  );
   pokemonDetails(pokemonIds);
 }
 
