@@ -14,10 +14,6 @@ export default async function pokemonDetails(pokemonIds) {
       renderPokemonDetails(template, container);
     }
 
-    const regionMons =  getParam("pokemon");
-    if (regionMons != null) {
-      document.getElementById("chooseRegion").value = regionMons;
-    }
     console.log(document.getElementById("chooseRegion").selectedIndex)
     document.getElementById("chooseRegion").addEventListener("change", selectRegion);
 
@@ -60,62 +56,139 @@ export function renderPokemonDetails(template, container) {
 export function selectRegion() {
   let startId = 0; 
   let endId = 0; 
-  
-  // Clear the existing pokemon cards
-  document.querySelector(".pokemon-cards").innerHTML = "";
+  for (let x = 0; x < document.getElementsByClassName("pokemon-card").length; x++){
+  document.querySelector(".pokemon-cards").innerHTML="";
 
-  if (this == undefined || this.value == "All") {
-
-    startId = 1; 
-    endId = 1010; 
-    
-  } else {
-    // Display specific region based on the selected value
-    if (this.value == "Kanto"){
-      startId = 1; 
-      endId = 151; 
-    }
-    else if (this.value == "Johto"){
-      startId = 152;
-      endId = 251;
-    }
-    else if (this.value == "Hoenn"){
-      startId = 252;
-      endId = 386;
-    }
-    else if (this.value == "Sinnoh"){
-      startId = 387;
-      endId = 493;
-    }
-    else if (this.value == "Unova"){
-      startId = 494;
-      endId = 649;
-    }
-    else if (this.value == "Kalos"){
-      startId = 650;
-      endId = 721;
-    }
-    else if (this.value == "Alola"){
-      startId = 722;
-      endId = 809;
-    }
-    else if (this.value == "Galar"){
-      startId = 810;
-      endId = 905;
-    }
-    else if (this.value == "Hisui"){
-      startId = 810;
-      endId = 905;
-    }
-    else if (this.value == "Paldea"){
-      startId = 906;
-      endId = 1010;
-    }
   }
-  
+
+if (this == undefined) {
+  const randomMons = getParam("pokemon");
+  if (randomMons == "Kanto"){
+    startId = 1; 
+    endId = 151; 
+    document.getElementById("chooseRegion").value = randomMons;
+ }
+else if (randomMons == "Johto"){
+   startId = 152;
+   endId = 251;
+   document.getElementById("chooseRegion").value = randomMons;
+
+ }
+ else if (randomMons == "Hoenn"){
+   startId = 252;
+   endId = 386;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Sinnoh"){
+   startId = 387;
+   endId = 493;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Unova"){
+   startId = 494;
+   endId = 649;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Kalos"){
+   startId = 650;
+   endId = 721;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Alola"){
+   startId = 722;
+   endId = 809;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Galar"){
+   startId = 810;
+   endId = 905;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Hisui"){
+   startId = 810;
+   endId = 905;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+ else if (randomMons == "Paldea"){
+   startId = 906;
+   endId = 1010;
+   document.getElementById("chooseRegion").value = randomMons;
+
+  }
+}
+else {
+    if (this.value == "Kanto"){
+     startId = 1; 
+     endId = 151; 
+     document.getElementById("chooseRegion").value = this.value;
+
+  }
+ else if (this.value == "Johto"){
+    startId = 152;
+    endId = 251;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Hoenn"){
+    startId = 252;
+    endId = 386;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Sinnoh"){
+    startId = 387;
+    endId = 493;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Unova"){
+    startId = 494;
+    endId = 649;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Kalos"){
+    startId = 650;
+    endId = 721;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Alola"){
+    startId = 722;
+    endId = 809;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Galar"){
+    startId = 810;
+    endId = 905;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Hisui"){
+    startId = 810;
+    endId = 905;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+  else if (this.value == "Paldea"){
+    startId = 906;
+    endId = 1010;
+    document.getElementById("chooseRegion").value = this.value;
+
+  }
+}
   const pokemonIds = Array.from({ length: endId - startId + 1 }, (_, index) => startId + index);
   pokemonDetails(pokemonIds);
 }
+
 
 function type2(pokemon) {
   if (pokemon.types[1] !== undefined) {
