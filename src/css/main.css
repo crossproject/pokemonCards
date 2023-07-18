@@ -324,3 +324,8 @@ footer {
     display: none;
   }
 }
+
+
+.player-pokemon {
+  transform: scaleX(-1);
+}
