@@ -198,7 +198,7 @@ function type2(pokemon) {
   }
 }
 
-function baseStatTotal(pokemon) {
+export function baseStatTotal(pokemon) {
   let total = 0;
   for (let i = 0; i < pokemon.stats.length; i++) {
     total += pokemon.stats[i].base_stat;
