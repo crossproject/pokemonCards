@@ -3,7 +3,7 @@ import { loadHeaderFooter, getParam, getLocalStorage } from "./utils.mjs";
 import { login, isTokenValid } from "./auth.mjs";
 import { showSlides } from "./carousel.js";
 
-const token = getLocalStorage("so_token")
+const token = getLocalStorage("so_token");
 
 loadHeaderFooter();
 
@@ -19,6 +19,6 @@ document.getElementById("login-button").addEventListener("click", (e) => {
   login({ email, password }, redirect);
 });
 
-if(isTokenValid(token)){
+if (isTokenValid(token)) {
   document.querySelector("#login-div").style.display = "none";
 }

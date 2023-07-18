@@ -49,14 +49,12 @@ header {
   justify-self: end;
 }
 
-
-
 #title {
   grid-column: 3;
   grid-row: 1;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #title2 {
@@ -94,12 +92,12 @@ header {
   padding: 10px;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: black;
 }
 
-li a:hover{
+li a:hover {
   color: white;
 }
 /* End of Navigation css */
@@ -182,8 +180,8 @@ li a:hover{
 #login-div {
   width: 300px;
   padding: 20px;
-  background-color: #3B4CCA;
-  border: 1px solid #3B4CCA;
+  background-color: #3b4cca;
+  border: 1px solid #3b4cca;
   border-radius: 5px;
 }
 /* end of main grid css */
@@ -208,7 +206,7 @@ input[type="password"] {
 
 button[type="submit"] {
   padding: 10px;
-  background-color: #CC0000;
+  background-color: #cc0000;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -216,7 +214,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #FF0000;
+  background-color: #ff0000;
 }
 /* end of login section css */
 
@@ -241,9 +239,9 @@ footer {
 }
 
 .pokemon-card {
-  background-color: #B3A125;
+  background-color: #b3a125;
   border-radius: 8px;
-  box-shadow: 0 2px 4px #3B4CCA;
+  box-shadow: 0 2px 4px #3b4cca;
   padding: 20px;
   text-align: center;
   width: 200px;
@@ -270,13 +268,13 @@ footer {
   font-size: 20px;
 }
 
-.pokemon-card p{
+.pokemon-card p {
   font-family: "Open Sans", sans-serif;
 }
 
 .card-line {
   border: none;
-  border-top: 1px solid #CC0000;
+  border-top: 1px solid #cc0000;
   margin: 10px 0;
 }
 
@@ -284,7 +282,7 @@ footer {
   content: "";
   display: block;
   height: 1px;
-  background-color: #CC0000;
+  background-color: #cc0000;
   margin: 10px auto;
   width: 80%;
 }
@@ -307,7 +305,7 @@ footer {
   margin: 20px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 2px 4px #B3A125;
+  box-shadow: 0 2px 4px #b3a125;
   text-align: center;
 }
 
@@ -333,7 +331,7 @@ footer {
 .pokemonRegionButton {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #CC0000;
+  background-color: #cc0000;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -343,7 +341,7 @@ footer {
 }
 
 .pokemonRegionButton:hover {
-  background-color: #FF0000;
+  background-color: #ff0000;
 }
 
 .Regions h3 {
@@ -356,7 +354,7 @@ footer {
   text-decoration: none;
 }
 
-.Regions li{
+.Regions li {
   list-style-type: none;
 }
 
