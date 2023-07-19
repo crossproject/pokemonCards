@@ -56,6 +56,10 @@
   align-items: center;
 }
 
+#player-pokemon {
+  transform: scaleX(-1);
+}
+
 #action-buttons {
   grid-row: 5/6;
 }
