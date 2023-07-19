@@ -182,7 +182,11 @@ else {
     startId = 906;
     endId = 1010;
     document.getElementById("chooseRegion").value = this.value;
-
+  }
+  else if (this.value == "All"){
+    startId = 1;
+    endId = 1010;
+    document.getElementById("chooseRegion").value = this.value;
   }
 }
   const pokemonIds = Array.from({ length: endId - startId + 1 }, (_, index) => startId + index);
