@@ -10,7 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, "src/index.html"),
         pokemonCards: resolve(__dirname, "src/pokemonCards.html"),
         regions: resolve(__dirname, "src/regions/index.html"),
-        game: resolve(__dirname,"src/game/index.html")
+        game: resolve(__dirname, "src/game/index.html"),
       },
     },
   },

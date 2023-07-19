@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
+* {
+}
+
+#divider {
+  display: block;
+}
+
+#stadium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.img-stadium,
+#pokemon-battle,
+#action-buttons {
+  max-width: 350px;
+  grid-column: 2/3;
+}
+
+#player-score {
+  grid-row: 1/2;
+  font-family: "Lunasima", sans-serif;
+}
+
+#player-life {
+  grid-row: 2/3;
+}
+
+#battle-result {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  height: 60px;
+  text-align: center;
+  font-family: "Lunasima", sans-serif;
+}
+
+#player-sprite,
+#oponent-sprite,
+#pokemon-battle,
+.img-stadium {
+  grid-row: 4/5;
+  font-family: "Lunasima", sans-serif;
+  text-align: center;
+}
+
+#oponent-sprite {
+  grid-column: 3/4;
+}
+
+#pokemon-battle,
+#action-buttons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#action-buttons {
+  grid-row: 5/6;
+}

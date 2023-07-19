@@ -14,7 +14,7 @@ export default async function pokemonDetails(pokemonIds) {
       renderPokemonDetails(template, container);
     }
 
-    console.log(document.getElementById("chooseRegion").selectedIndex)
+    
     document.getElementById("chooseRegion").addEventListener("change", selectRegion);
 
   } catch (error) {

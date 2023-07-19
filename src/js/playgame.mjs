@@ -149,11 +149,11 @@ export default async function startNewGame(newStadium=false) {
     
       switch (choice) {
           case 0:
-              displayBattleResult("Draw!");
+              displayBattleResult("DRAW!");
               displayRestartButton(buttonDiv);
               return;
           case 1:
-              displayBattleResult("You Win!");
+              displayBattleResult("YOU WIN!");
               playerScore += calculateScoreDifference( playerPokemon.stats, enemyPokemon.stats );
               displayScore(scoreSelector,playerScore);
               displayRestartButton(buttonDiv);
@@ -167,7 +167,7 @@ export default async function startNewGame(newStadium=false) {
                 break;
               }
 
-              displayBattleResult("You Lose!");
+              displayBattleResult("YOU LOSE!");
               displayScore(scoreSelector,playerScore);
               displayLife(lifeSelector,playerLives);
               displayRestartButton(buttonDiv);
@@ -227,7 +227,7 @@ export default async function startNewGame(newStadium=false) {
       selector.firstElementChild.remove();
     }
       let stadiumNumber = Math.ceil(Math.random() * 4);
-      let stadiumBackground = `<img src="/images/stadium-${stadiumNumber}.jpg" alt="Stadium-${stadiumNumber}">`;
+      let stadiumBackground = `<img src="/images/stadium-1.jpg" alt="Stadium-${stadiumNumber}" class="img-stadium">`;
       selector.insertAdjacentHTML("afterbegin",stadiumBackground);
   }
 

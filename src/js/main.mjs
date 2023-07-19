@@ -53,7 +53,7 @@ export function pokemonFunFactTemplate(pokemonSpecies){
     else {
         for (let p = 0; p < pokemonSpecies.flavor_text_entries.length; p++) {
             if (pokemonSpecies.flavor_text_entries[p].language.name === 'en'){
-                console.log(pokemonSpecies.flavor_text_entries[p].language.name)
+                
                return ` ${pokemonSpecies.flavor_text_entries[p].flavor_text}`; 
             }
         }
